@@ -1,0 +1,63 @@
+Host vds
+HostName 188.93.19.195
+User root
+Protocol 2
+KeepAlive yes
+Compression yes
+IdentityFile ~/.ssh/marina_sydoruk
+
+Host ok01
+HostName 5.178.84.106
+User root
+Protocol 2
+KeepAlive yes
+Compression yes
+IdentityFile ~/.ssh/marina_sydoruk
+
+Host ok05
+HostName 5.178.84.110
+User root
+Protocol 2
+KeepAlive yes
+Compression yes
+IdentityFile ~/.ssh/marina_sydoruk
+
+Host vk01
+HostName 31.186.102.235
+User root
+Protocol 2
+KeepAlive yes
+Compression yes
+IdentityFile ~/.ssh/marina_sydoruk
+
+Host vk03
+HostName 31.186.102.237
+User root
+Protocol 2
+KeepAlive yes
+Compression yes
+IdentityFile ~/.ssh/marina_sydoruk
+
+Host mm01
+HostName btnode1.mm.joyrocks.com
+User root
+Protocol 2
+KeepAlive yes
+Compression yes
+IdentityFile ~/.ssh/marina_sydoruk
+
+Host ym_web
+HostName pg.ym.web01.101xp.com
+User root
+Protocol 2
+KeepAlive yes
+Compression yes
+IdentityFile ~/.ssh/marina_sydoruk
+
+Host amazon_test
+HostName ec2-54-183-171-42.us-west-1.compute.amazonaws.com
+User ec2-user
+Protocol 2
+KeepAlive yes
+Compression yes
+IdentityFile ~/.ssh/root.pem

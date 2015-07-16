@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="server/app" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" path-to-js-file="app.js" working-dir="$PROJECT_DIR$/server">
+    <envs>
+      <env name="DEBUG" value="Game:*" />
+    </envs>
+    <browser name="e5120d43-2c3f-47ef-9f26-65e539e05186" start="true" url="http://localhost:4787/index.html" />
+    <method />
+  </configuration>
+</component>

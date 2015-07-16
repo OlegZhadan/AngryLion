@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8" />
+		<meta http-equiv = "X-UA-Compatible" content = "IE = edge,chrome = 1" />
+		
+		<!-- the name of your game -->
+        <meta name="title" content="Дорога домой" />
+        <meta name="description" content="Я играю в Дорогу домой. Присоединяйся!">
+        <link rel="image_src" href="http://vk.angrylionstudio.com/assets/publication/share.jpg">
+		<title>Дорога домой</title>
+		
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no, minimal-ui" />
+		<meta name = "apple-mobile-web-app-capable" content = "yes" />
+		<meta name = "apple-mobile-web-app-status-bar-style" content = "black" />
+		<meta name = "HandheldFriendly" content = "true" />
+		
+		<meta name = "mobile-web-app-capable" content = "yes" />
+		
+		<!-- a 256x256 icon should ho here, this is your favicon -->
+		<link rel = "shortcut icon" sizes = "256x256" href = "icon-256.png" />
+		<link rel = "apple-touch-icon" sizes = "256x256" href = "icon-256.png" />
+
+        <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+        <script type="text/javascript" src="https://vk.com/js/api/sshare.js?90" charset="windows-1251"></script>
+        <script type="text/javascript">
+            var vk_l = false;
+            var vk_s = false;
+         //   VK.init({
+         //       apiId: 4975471, onlyWidgets:true
+         //   });
+         //   VK.Widgets.Like("vk_like", {type: "button", height: 22}, 1);
+        </script>
+
+          <style type = "text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body {
+                background:url("/assets/sprites/loader/Loader.gif") center center no-repeat;
+				color: #fff;
+				overflow: hidden;
+				-ms-touch-action: none;
+                height: 640px;
+			}
+			canvas {
+				touch-action-delay: none;
+				touch-action: none;
+				-ms-touch-action: none;
+			}
+            @font-face {
+                font-family: "MainFont";
+                src: url('assets/fonts/mainFont.ttf');
+            }
+
+            #gameDiv {
+                opacity: 0;
+                width: 860px;
+                height: 640px;
+                cursor: default;
+            }
+
+            #bottomMenu {
+                padding: 5px 0 0 00px;
+            }
+
+            .bottomMenuGroup {
+                background: url('/assets/sprites/bottom_menu/ButtonGroup.png') no-repeat;
+                width: 64px;
+                height: 30px;
+                float:left;
+                font-family: 'MainFont';
+                font-size: 13px;
+                color: #4b7b1d;
+                padding-left: 44px;
+                padding-top: 8px;
+                font-weight: bold;
+            }
+
+            .bottomMenuHelp {
+                background: url('/assets/sprites/bottom_menu/ButtonHelp.png') no-repeat;
+                width: 68px;
+                height: 30px;
+                float:left;
+                font-family: 'MainFont';
+                font-size: 13px;
+                color: #4b7b1d;
+                padding-left: 40px;
+                padding-top: 8px;
+                font-weight: bold;
+            }
+
+            .bottomMenuAddMenu {
+                background: url('/assets/sprites/bottom_menu/ButtonAddMenu.png') no-repeat;
+                width: 133px;
+                height: 30px;
+                float:left;
+                font-family: 'MainFont';
+                font-size: 13px;
+                color: #4b7b1d;
+                padding-left: 40px;
+                padding-top: 8px;
+                font-weight: bold;
+            }
+
+            .bottomMenuLike {
+                width: 180px;
+                height: 30px;
+                padding-top: 7px;
+                float:left;
+            }
+
+            .bottomMenuShare {
+                width: 180px;
+                height: 30px;
+                padding-top: 8px;
+                float:left;
+            }
+
+            .bottomMenu {
+                margin: 0 10px;
+            }
+
+            .bottomMenu:hover {
+                cursor: pointer;
+            }
+
+            .bottomMenu:target {
+                cursor: pointer;
+            }
+    		</style>
+
+    </head>
+    
+    <body>
+        <div id="gameDiv"></div>
+        <div id="bottomMenu">
+            <div class="bottomMenuShare bottomMenu" onClick="isShare()">
+                <script type="text/javascript">
+                    document.write(VK.Share.button({ url:"https://vk.com/app44975471", image:"http://vk.angrylionstudio.com/assets/publication/share.jpg?5", title:"Маблы", description:"Я играю в Маблы. Присоединяйся!"}, {type: "round", text: "Рассказать друзьям"}));
+                </script>
+            </div>       <div class="bottomMenuGroup bottomMenu" onClick="window.open('http://vk.com/club97043019');">Группа</div>
+            <div class="bottomMenuHelp bottomMenu" onClick="window.open('http://vk.com/board97043019');">Помощь</div>
+            <div class="bottomMenuAddMenu bottomMenu" onClick="VK.callMethod('showSettingsBox', 256);">Добавить в меню</div>
+            <div class="bottomMenuLike bottomMenu">
+                <div id="vk_like"></div>
+            </div>
+        </div>
+    </body>
+
+    <script src = "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+    <script src = "phaser.min.js"></script>
+    <script src = "src/boot.js"></script>
+    <script src = "src/preload.js"></script>
+    <script src = "src/levelmap.js"></script>
+    <script src = "src/thegame.js"></script>
+
+    <script src = "src/main.js"></script>
+    <!--<script>-->
+        <!--function isShare(){-->
+            <!--vk_s = true;-->
+        <!--}-->
+    <!--</script>-->
+</html>
